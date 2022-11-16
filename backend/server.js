@@ -6,7 +6,9 @@ const cors = require("cors");
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  const response = await fetch("https://www.bluecross.org.uk/pet/listing/cat");
+  const response = await fetch(
+    "https://www.cats.org.uk/umbraco/surface/catsearch/searchcats?longitude=-2.01580047607422&latitude=52.4455108642578&withCats=false&withDogs=false&withChildren=false&withFamilies=false&indoorsOnly=false"
+  );
   const data = await response.json();
   res.json(await data);
 });

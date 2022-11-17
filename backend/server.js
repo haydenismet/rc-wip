@@ -1,17 +1,18 @@
 const express = require("express");
 const app = express();
-const fetch = require("node-fetch");
+
 const cors = require("cors");
+
+//import your route (i.e animals api for use by server.js) Acts like middleware now its been imported via .use
+const animalRoutes = require("./routes/animals-routes");
 
 app.use(cors());
 
-app.get("/", async (req, res) => {
-  const response = await fetch(
-    "https://www.cats.org.uk/umbraco/surface/catsearch/searchcats?longitude=-2.01580047607422&latitude=52.4455108642578&withCats=false&withDogs=false&withChildren=false&withFamilies=false&indoorsOnly=false"
-  );
-  const data = await response.json();
-  res.json(await data);
-});
+//to json (like body-parser)
+app.use(express.json());
+
+//get the api setup routes via /api/animals for animals
+app.use("/api/animals", animalRoutes);
 
 app.listen(4000, () => {
   console.log("listening on port 4000");

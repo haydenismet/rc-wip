@@ -18,7 +18,7 @@ router.get("/all-animals", animalsControllers.getAllAnimals);
 ///////////////////////// ORGANISATIONS /////////////////////
 
 //GET ALL BLUE CROSS PETS
-//router.get("/blue-cross", animalsControllers.getAllBlueCross);
+router.get("/blue-cross", animalsControllers.getAllBlueCross);
 
 //GET BLUE CROSS DOGS
 //router.get("/blue-cross-dogs", animalsControllers.getBlueCrossDogs);

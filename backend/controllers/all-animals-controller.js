@@ -2,7 +2,7 @@ const e = require("express");
 const fetch = require("node-fetch");
 
 //// NETWORK FETCH LIST ////
-// USING THIS SAYS ONLY ABSOLUTE URLS ARE SUPPORTED???????????????/
+// Using this says only absolute URLs are supported when applied in the get request, seek halps //
 const CHARITY_NETWORK_REQUESTS = [
   {
     charity_name: "cats protection",
@@ -23,7 +23,9 @@ const CHARITY_NETWORK_REQUESTS = [
   },
 ];
 
-/////////// LOOP EXPERIMENT /////////////
+///////////// LOOP EXPERIMENT /////////////
+// Loop experiment doesnt work as it requires the ALL_DATA to be outside the .get, which then means the data is duplicated on call of the request again. seek halps //
+
 // const ALL_DATA = [];
 // async function NETWORK_SETUP(fetcher) {
 //   try {
@@ -40,7 +42,7 @@ const CHARITY_NETWORK_REQUESTS = [
 // }
 
 const getAllAnimals = async (req, res, next) => {
-  //////////////// . LOOP EXP IN GETALLANIMALS CONT ///////////
+  //////////////// LOOP EXP CONTINUED ///////////
   // CHARITY_NETWORK_REQUESTS.forEach((url, index) => {
   //   return NETWORK_SETUP(url.fetch_url);
   // });
@@ -95,9 +97,30 @@ const getAllAnimals = async (req, res, next) => {
 };
 
 // GET ALL BLUE CROSS
-
 const getAllBlueCross = async (req, res, next) => {
   const ALL_DATA = [];
+  try {
+    const blueCrossCatResponse = await fetch(
+      "https://www.bluecross.org.uk/pet/listing/cat"
+    );
+    const blueCrossCatData = await blueCrossCatResponse.json();
+    ALL_DATA.push(blueCrossCatData.results);
+  } catch (e) {
+    console.log("Blue Cross Cat Data Error " + e);
+  }
+
+  try {
+    const blueCrossDogResponse = await fetch(
+      "https://www.bluecross.org.uk/pet/listing/dog"
+    );
+    const blueCrossDogData = await blueCrossDogResponse.json();
+    ALL_DATA.push(blueCrossDogData.results);
+  } catch (e) {
+    console.log("Blue Cross Dog Data Error " + e);
+  }
+  res.json({
+    all_data: ALL_DATA,
+  });
 };
 
 //////////////////////// FILTERS ////////////////////////////
@@ -106,3 +129,4 @@ const getAllBlueCross = async (req, res, next) => {
 
 // to export multiples dont use module.exports, use (but dont execute with (), just passing reference) :
 exports.getAllAnimals = getAllAnimals;
+exports.getAllBlueCross = getAllBlueCross;

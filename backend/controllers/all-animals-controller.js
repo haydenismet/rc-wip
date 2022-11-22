@@ -2,23 +2,56 @@ const e = require("express");
 const fetch = require("node-fetch");
 
 //// NETWORK FETCH LIST ////
+// USING THIS SAYS ONLY ABSOLUTE URLS ARE SUPPORTED???????????????/
+const CHARITY_NETWORK_REQUESTS = [
+  {
+    charity_name: "cats protection",
+    fetch_url:
+      "https://www.cats.org.uk/umbraco/surface/catsearch/searchcats?longitude=-2.01580047607422&latitude=52.4455108642578&withCats=false&withDogs=false&withChildren=false&withFamilies=false&indoorsOnly=false",
+  },
+  {
+    charity_name: "blue cross",
+    fetch_url: "https://www.bluecross.org.uk/pet/listing/cat",
+  },
+  {
+    charity_name: "blue cross",
+    fetch_url: "https://www.bluecross.org.uk/pet/listing/dog",
+  },
+  {
+    charity_name: "battersea dogs home",
+    fetch_url: "https://www.battersea.org.uk/api/animals/dogs",
+  },
+];
 
-const CHARITY_NETWORK_REQUESTS = {
-  catsProtectionCats:
-    "https://www.cats.org.uk/umbraco/surface/catsearch/searchcats?longitude=-2.01580047607422&latitude=52.4455108642578&withCats=false&withDogs=false&withChildren=false&withFamilies=false&indoorsOnly=false",
-  blueCrossCats: "https://www.bluecross.org.uk/pet/listing/cat",
-  blueCrossDogs: "https://www.bluecross.org.uk/pet/listing/dog",
-  batterseaDogs: "https://www.battersea.org.uk/api/animals/dogs",
-};
+/////////// LOOP EXPERIMENT /////////////
+// const ALL_DATA = [];
+// async function NETWORK_SETUP(fetcher) {
+//   try {
+//     const networkCall = await fetch(fetcher);
 
-//GET ALL CHARITY NETWORK REQS
+//     const networkData = await networkCall.json();
+
+//     const results = ALL_DATA.push(networkData);
+
+//     return results;
+//   } catch (e) {
+//     console.log(fetcher, " network request error");
+//   }
+// }
+
 const getAllAnimals = async (req, res, next) => {
-  const ALL_DATA = [];
+  //////////////// . LOOP EXP IN GETALLANIMALS CONT ///////////
+  // CHARITY_NETWORK_REQUESTS.forEach((url, index) => {
+  //   return NETWORK_SETUP(url.fetch_url);
+  // });
+  ///////////////////////////////////////////////
 
-  // LIMIT TO FIRST 10 CALLS ONLY
+  ///////////////// WORKING NON LOOP EXPERIMENT ///////////////////
+  const ALL_DATA = [];
+  // // LIMIT TO FIRST 10 CALLS ONLY
   try {
     const catsProtectionResponse = await fetch(
-      CHARITY_NETWORK_REQUESTS.catsProtectionCats
+      "https://www.cats.org.uk/umbraco/surface/catsearch/searchcats?longitude=-2.01580047607422&latitude=52.4455108642578&withCats=false&withDogs=false&withChildren=false&withFamilies=false&indoorsOnly=false"
     );
     const catsProtectionData = await catsProtectionResponse.json();
     ALL_DATA.push({ cats_protection: catsProtectionData });
@@ -28,7 +61,7 @@ const getAllAnimals = async (req, res, next) => {
 
   try {
     const blueCrossCatResponse = await fetch(
-      CHARITY_NETWORK_REQUESTS.blueCrossCats
+      "https://www.bluecross.org.uk/pet/listing/cat"
     );
     const blueCrossCatData = await blueCrossCatResponse.json();
     ALL_DATA.push({ blue_cross_cat: blueCrossCatData });
@@ -38,7 +71,7 @@ const getAllAnimals = async (req, res, next) => {
 
   try {
     const blueCrossDogResponse = await fetch(
-      CHARITY_NETWORK_REQUESTS.blueCrossDogs
+      "https://www.bluecross.org.uk/pet/listing/dog"
     );
     const blueCrossDogData = await blueCrossDogResponse.json();
     ALL_DATA.push({ blue_cross_dog: blueCrossDogData });
@@ -48,7 +81,7 @@ const getAllAnimals = async (req, res, next) => {
 
   try {
     const batterseaDogsResponse = await fetch(
-      CHARITY_NETWORK_REQUESTS.batterseaDogs
+      "https://www.battersea.org.uk/api/animals/dogs"
     );
     const batterseaDogsData = await batterseaDogsResponse.json();
     ALL_DATA.push({ battersea_dogs: batterseaDogsData });

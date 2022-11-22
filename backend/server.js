@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 //get the api setup routes via /api/animals for animals
-app.use("/api/animals", animalRoutes);
+app.use("/api", animalRoutes);
 
 app.listen(4000, () => {
   console.log("listening on port 4000");

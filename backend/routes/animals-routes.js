@@ -18,20 +18,21 @@ router.get("/all-animals", animalsControllers.getAllAnimals);
 ///////////////////////// ORGANISATIONS /////////////////////
 
 //GET ALL BLUE CROSS PETS
+//router.get("/blue-cross", animalsControllers.getAllBlueCross);
 
 //GET BLUE CROSS DOGS
+//router.get("/blue-cross-dogs", animalsControllers.getBlueCrossDogs);
 
 //GET BLUE CROSS CATS
+//router.get("/blue-cross-cats", animalsControllers.getBlueCrossCats);
 
 //GET BATTERSEA DOGS
+//router.get("/battersea", animalsControllers.getBattersea);
 
 //GET CATS PROTECTION
+//router.get("/cats-protection", animalsControllers.getCatsProtection);
 
 /////////////////////////////////////////////////////////////
-
-//////////////////////// FILTERS ////////////////////////////
-
-// Can you do like a filterisation so you call all on page load and then filtered topics are all like your ‘own’ api calls but really it’s just a manipulation of the data? Ie if filter → dogs is clicked then it’s the results of the already called all-animals but filtered to dogs only. But before this you standardize all of the results like species = cat etc. So doing it in back end instead of front and utilizing express to do heavy work - GOES IN CONTROLLERS
 
 /////////////////////////////////////////////////////////////
 

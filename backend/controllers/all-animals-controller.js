@@ -24,7 +24,7 @@ const CHARITY_NETWORK_REQUESTS = [
 ];
 
 ///////////// LOOP EXPERIMENT /////////////
-// Loop experiment doesnt work as it requires the ALL_DATA to be outside the .get, which then means the data is duplicated on call of the request again. seek halps //
+// Loop experiment doesnt work as it requires the ALL_DATA to be outside the .get, which then means the data is duplicated on call of the request again Could use promise.allsettled as not all will return. seek halps //
 
 // const ALL_DATA = [];
 // async function NETWORK_SETUP(fetcher) {

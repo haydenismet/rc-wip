@@ -1,0 +1,148 @@
+/****************** BASE STYLES *******************/
+/*
+1em = 16px
+1.6rem = 16px
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-12: 1.2rem;
+  --font-16-body: 1.6rem;
+  --font-16: 1.6rem;
+  --bg-colour-header: #d9d9d9;
+  --body-font-colour: #585858;
+  --container-width: 1200px;
+  --rectangle-bg-colour: #d9d9d9;
+  --body-bg-colour: #f4f4f4;
+  --font-family-choice: "Lexend Deca", sans-serif;
+  --button-bg-colour: #585858;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* 16px */
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: var(--font-16-body);
+  color: var(--body-font-colour);
+  font-family: var(--font-family-choice);
+  font-weight: 300;
+  background-color: var(--body-bg-colour);
+}
+
+section {
+  padding: 12rem 0;
+}
+
+/**************************************/
+
+.top-header {
+  text-align: center;
+  font-size: var(--font-12);
+  background-color: var(--bg-colour-header);
+  padding: 0.8rem 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 5.5rem 0;
+}
+
+.rc-logo {
+  width: 240px;
+  height: auto;
+}
+
+.favourite svg {
+  min-height: 6rem;
+  width: auto;
+}
+.listing-favourite svg {
+  min-height: 2rem;
+  width: auto;
+}
+
+.rectangle-bg {
+  height: 14rem;
+  max-width: 100%;
+  border-radius: 10rem;
+  background-color: var(--rectangle-bg-colour);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.adoption-heading {
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -5px;
+  margin: 5px 0 0 150px;
+}
+
+.adoption-subheading {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.adopted-img {
+  max-height: 344px;
+  width: auto;
+  position: absolute;
+  right: 60px;
+  bottom: -35px;
+}
+
+.button-cta {
+  font-family: var(--font-family-choice);
+  width: 100%;
+  border: 0;
+  font-size: var(--font-16);
+  color: var(--body-font-colour);
+  background-color: var(--rectangle-bg-colour);
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+
+.filter h2 {
+  margin-bottom: 2rem;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-list select {
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--button-bg-colour);
+  color: white;
+  font-size: var(--font-16);
+  font-family: var(--font-family-choice);
+  border-right: 15px solid transparent;
+}

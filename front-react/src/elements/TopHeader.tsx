@@ -1,9 +1,8 @@
 import React from "react";
-
 export default function TopHeader() {
     return (<>
         <div className="top-header">
-            find your furry friend from multiple charities at once.
+            we pool animal adoption charities together so you don’t have to.
         </div>
     </>)
 }

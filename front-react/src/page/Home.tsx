@@ -6,6 +6,8 @@ import Filter from "../elements/Filter";
 import Listing from "../elements/Listing";
 import Footer from "../elements/Footer";
 
+// function types
+// prop types
 export default function Home() {
     return (<>
         <TopHeader />

@@ -15,7 +15,20 @@ export default function Home() {
             <Navbar />
             <Hero />
             <Filter />
-            <Listing />
+            <div className="listing">
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+            </div>
         </div>
         <Footer />
     </>)

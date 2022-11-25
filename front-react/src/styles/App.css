@@ -9,6 +9,7 @@
   --font-12: 1.2rem;
   --font-16-body: 1.6rem;
   --font-16: 1.6rem;
+  --font-18: 1.8rem;
   --bg-colour-header: #d9d9d9;
   --body-font-colour: #585858;
   --container-width: 1200px;
@@ -43,7 +44,7 @@ body {
 }
 
 section {
-  padding: 12rem 0;
+  padding: 12rem 0 0 0;
 }
 
 /**************************************/
@@ -68,7 +69,7 @@ section {
 }
 
 .rc-logo {
-  width: 240px;
+  width: 24rem;
   height: auto;
 }
 
@@ -77,7 +78,7 @@ section {
   width: auto;
 }
 .listing-favourite svg {
-  min-height: 2rem;
+  min-height: 2.5rem;
   width: auto;
 }
 
@@ -98,7 +99,7 @@ section {
   font-size: 64px;
   font-weight: 600;
   letter-spacing: -5px;
-  margin: 5px 0 0 150px;
+  margin: 0.5rem 0 0 15rem;
 }
 
 .adoption-subheading {
@@ -106,23 +107,23 @@ section {
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: -15px;
+  margin-top: -1.5rem;
 }
 
 .adopted-img {
   max-height: 344px;
   width: auto;
   position: absolute;
-  right: 60px;
-  bottom: -35px;
+  right: 6rem;
+  bottom: -3.5rem;
 }
 
 .button-cta {
   font-family: var(--font-family-choice);
-  width: 100%;
-  border: 0;
   font-size: var(--font-16);
   color: var(--body-font-colour);
+  width: 100%;
+  border: 0;
   background-color: var(--rectangle-bg-colour);
   border-radius: 0.6rem;
   padding: 1rem;
@@ -130,11 +131,13 @@ section {
 
 .filter h2 {
   margin-bottom: 2rem;
+  font-size: 3.2rem;
 }
 
 .filter-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .filter-list select {
@@ -144,5 +147,64 @@ section {
   color: white;
   font-size: var(--font-16);
   font-family: var(--font-family-choice);
-  border-right: 15px solid transparent;
+  border-right: 1.5rem solid transparent;
+}
+
+.listing {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.listing-image {
+  position: relative;
+}
+
+.listing-image img {
+  max-height: 18rem;
+  width: auto;
+}
+
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.65rem;
+  padding: 0.5rem;
+}
+
+.listing-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listing-copy {
+  font-family: var(--font-family-choice);
+  font-size: var(--font-16);
+  color: var(--body-font-colour);
+}
+
+.listing-title {
+  font-weight: 400;
+  font-size: var(--font-18);
+  letter-spacing: -1.2px;
+  padding: 0.2rem 0;
+}
+
+.listing-org {
+  font-size: var(--font-12);
+  letter-spacing: -0.3px;
+}
+
+.reserved {
+  font-family: var(--font-family-choice);
+  font-size: var(--font-12);
+  color: var(--body-font-colour);
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: white;
+  background-color: var(--button-bg-colour);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0.5rem;
 }

@@ -213,3 +213,30 @@ section {
   position: absolute;
   bottom: 0.5rem;
 }
+
+/****************** FOOTER *******************/
+
+.footer {
+  background-color: var(--bg-colour-header);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 12rem;
+  padding: 1rem;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sneaky-kitty {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

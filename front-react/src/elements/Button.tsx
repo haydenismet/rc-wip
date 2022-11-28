@@ -1,5 +1,4 @@
 import React from "react";
-import bgImg from "../assets/bg-header-pets.png";
 
 export default function Button() {
     return (

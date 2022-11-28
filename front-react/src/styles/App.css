@@ -43,12 +43,17 @@ body {
   background-color: var(--body-bg-colour);
 }
 
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
 section {
   padding: 12rem 0 0 0;
 }
-
 /**************************************/
 
+/****************** TOP HEADER *******************/
 .top-header {
   text-align: center;
   font-size: var(--font-12);
@@ -56,11 +61,7 @@ section {
   padding: 0.8rem 0;
 }
 
-.container {
-  max-width: var(--container-width);
-  margin: auto;
-}
-
+/****************** NAVBAR *******************/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -77,11 +78,8 @@ section {
   min-height: 6rem;
   width: auto;
 }
-.listing-favourite svg {
-  min-height: 2.5rem;
-  width: auto;
-}
 
+/****************** HERO *******************/
 .rectangle-bg {
   height: 14rem;
   max-width: 100%;
@@ -129,6 +127,7 @@ section {
   padding: 1rem;
 }
 
+/****************** FILTER *******************/
 .filter h2 {
   margin-bottom: 2rem;
   font-size: 3.2rem;
@@ -150,6 +149,7 @@ section {
   border-right: 1.5rem solid transparent;
 }
 
+/****************** LISTING *******************/
 .listing {
   display: flex;
   justify-content: space-between;
@@ -194,6 +194,11 @@ section {
 .listing-org {
   font-size: var(--font-12);
   letter-spacing: -0.3px;
+}
+
+.listing-favourite svg {
+  min-height: 2.5rem;
+  width: auto;
 }
 
 .reserved {

@@ -10,13 +10,19 @@
   --font-16-body: 1.6rem;
   --font-16: 1.6rem;
   --font-18: 1.8rem;
-  --bg-colour-header: #d9d9d9;
+  --bg-colour-header-footer: #585858;
   --body-font-colour: #585858;
-  --container-width: 1200px;
+  --container-width: 1100px;
   --rectangle-bg-colour: #d9d9d9;
+  --rectangle-text-colour: #585858;
   --body-bg-colour: #f4f4f4;
   --font-family-choice: "Lexend Deca", sans-serif;
   --button-bg-colour: #585858;
+  --white-colour-text: #ffffff;
+}
+
+#root {
+  position: relative;
 }
 
 *,
@@ -57,8 +63,9 @@ section {
 .top-header {
   text-align: center;
   font-size: var(--font-12);
-  background-color: var(--bg-colour-header);
+  background-color: var(--bg-colour-header-footer);
   padding: 0.8rem 0;
+  color: var(--white-colour-text);
 }
 
 /****************** NAVBAR *******************/
@@ -84,6 +91,7 @@ section {
   height: 14rem;
   max-width: 100%;
   border-radius: 10rem;
+  color: var(--rectangle-text-colour);
   background-color: var(--rectangle-bg-colour);
 }
 
@@ -119,10 +127,10 @@ section {
 .button-cta {
   font-family: var(--font-family-choice);
   font-size: var(--font-16);
-  color: var(--body-font-colour);
+  color: var(--white-colour-text);
   width: 100%;
   border: 0;
-  background-color: var(--rectangle-bg-colour);
+  background-color: var(--button-bg-colour);
   border-radius: 0.6rem;
   padding: 1rem;
 }
@@ -147,12 +155,14 @@ section {
   font-size: var(--font-16);
   font-family: var(--font-family-choice);
   border-right: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent !important;
+  border: 0rem;
 }
 
 /****************** LISTING *******************/
 .listing {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -217,12 +227,13 @@ section {
 /****************** FOOTER *******************/
 
 .footer {
-  background-color: var(--bg-colour-header);
+  background-color: var(--bg-colour-header-footer);
   display: flex;
   justify-content: center;
   position: relative;
   align-items: center;
   padding: 2rem 0;
+  color: var(--white-colour-text);
 }
 
 .footer-logo img {
@@ -252,7 +263,7 @@ section {
 /****************** LOAD MORE *******************/
 
 .load-more {
-  background-color: var(--bg-colour-header);
+  background-color: var(--bg-colour-main);
   margin: 2rem 0;
   text-align: center;
   padding: 2rem 0;
@@ -260,4 +271,23 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+}
+
+.popup-bg {
+  position: fixed;
+  min-width: 60vw;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(
+    54,
+    54,
+    54
+  ); /* Fallback for older browsers without RGBA-support */
+  background: rgba(54, 54, 54, 0.5);
+  z-index: 5;
+  color: #ffffff;
+  border-radius: 0.5rem;
 }

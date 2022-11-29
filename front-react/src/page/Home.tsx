@@ -32,9 +32,9 @@ export default function Home() {
                 <Listing />
             </div>
             <LoadMore />
-            <Popup />
         </div>
         <Footer />
+        {/* <Popup /> */}
     </>)
 }
 

@@ -7,9 +7,11 @@
 
 :root {
   --font-12: 1.2rem;
+  --font-14: 1.4rem;
   --font-16-body: 1.6rem;
   --font-16: 1.6rem;
   --font-18: 1.8rem;
+  --font-40: 3rem;
   --bg-colour-header-footer: #585858;
   --body-font-colour: #585858;
   --container-width: 1100px;
@@ -19,6 +21,7 @@
   --font-family-choice: "Lexend Deca", sans-serif;
   --button-bg-colour: #585858;
   --white-colour-text: #ffffff;
+  --divider-colour: #cccccc;
 }
 
 #root {
@@ -263,7 +266,7 @@ section {
 /****************** LOAD MORE *******************/
 
 .load-more {
-  background-color: var(--bg-colour-main);
+  background-color: var(--rectangle-bg-colour);
   margin: 2rem 0;
   text-align: center;
   padding: 2rem 0;
@@ -301,4 +304,78 @@ section {
 }
 .slider-thumb-img {
   margin: 2rem 0;
+  min-width: 0;
+}
+
+/****************** ANIMAL DETAILS COPY  *******************/
+.animal-detail-copy-container {
+}
+
+.animal-core-container {
+  display: flex;
+  justify-content: space-between;
+}
+.animal-core-details {
+}
+
+.animal-title {
+  font-family: var(--font-family-choice);
+  font-weight: 500;
+  font-size: var(--font-40);
+  letter-spacing: -0.15rem;
+}
+
+.animal-organisation {
+  font-family: var(--font-family-choice);
+  font-size: var(--font-14);
+}
+
+.reserved-details {
+  font-family: var(--font-family-choice);
+  font-size: var(--font-14);
+  color: var(--body-font-colour);
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: white;
+  background-color: var(--button-bg-colour);
+  padding: 1rem;
+  margin: 1rem 0 3rem 0;
+}
+
+.favourite-animal-detail svg {
+  font-size: 5rem;
+}
+
+.animal-details-table {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-family-choice);
+  font-size: var(--font-16);
+  color: var(--body-font-colour);
+  font-weight: 300;
+}
+
+.divider {
+  width: 100%;
+  margin: 1.5rem 0;
+  height: 0.1rem;
+  content: "";
+  display: block;
+  background-color: var(--divider-colour);
+  border-radius: 1rem;
+}
+
+.divider:last-child {
+  margin-bottom: 10rem;
+  height: 0;
+}
+
+.animal-details-button {
+  display: flex;
+  margin: 3rem 0;
+}
+
+.animal-details-button .button-cta {
+  width: 30%;
+  margin: 0 auto;
 }

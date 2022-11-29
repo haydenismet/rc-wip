@@ -8,6 +8,7 @@ import Footer from "../elements/Footer";
 import LoadMore from "../elements/LoadMore";
 import Popup from "../elements/Popup";
 import Slider from "../elements/Slider";
+import AnimalDetailCopy from "../elements/AnimalDetailCopy";
 
 // function types
 // prop types
@@ -17,7 +18,7 @@ export default function AnimalDetail() {
         <div className="container">
             <Navbar />
             <Slider />
-
+            <AnimalDetailCopy />
 
         </div>
         <Footer />

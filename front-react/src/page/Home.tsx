@@ -6,6 +6,7 @@ import Filter from "../elements/Filter";
 import Listing from "../elements/Listing";
 import Footer from "../elements/Footer";
 import LoadMore from "../elements/LoadMore";
+import Popup from "../elements/Popup";
 
 // function types
 // prop types
@@ -31,6 +32,7 @@ export default function Home() {
                 <Listing />
             </div>
             <LoadMore />
+            <Popup />
         </div>
         <Footer />
     </>)

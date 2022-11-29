@@ -5,6 +5,7 @@ import TopHeader from "../elements/TopHeader";
 import Filter from "../elements/Filter";
 import Listing from "../elements/Listing";
 import Footer from "../elements/Footer";
+import LoadMore from "../elements/LoadMore";
 
 // function types
 // prop types
@@ -29,6 +30,7 @@ export default function Home() {
                 <Listing />
                 <Listing />
             </div>
+            <LoadMore />
         </div>
         <Footer />
     </>)

@@ -222,11 +222,15 @@ section {
   justify-content: center;
   position: relative;
   align-items: center;
+  padding: 2rem 0;
 }
 
 .footer-logo img {
-  max-width: 12rem;
+  max-width: 10rem;
   padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .footer-info {
@@ -235,8 +239,25 @@ section {
   justify-content: space-between;
 }
 
+.footer-copy {
+  font-size: var(--font-12);
+}
+
 .sneaky-kitty {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+/****************** LOAD MORE *******************/
+
+.load-more {
+  background-color: var(--bg-colour-header);
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }

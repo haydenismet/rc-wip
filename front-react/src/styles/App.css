@@ -273,6 +273,7 @@ section {
   letter-spacing: 0.05rem;
 }
 
+/****************** POPUP *******************/
 .popup-bg {
   position: fixed;
   min-width: 60vw;
@@ -281,13 +282,23 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(
-    54,
-    54,
-    54
-  ); /* Fallback for older browsers without RGBA-support */
+  background: rgb(54, 54, 54);
   background: rgba(54, 54, 54, 0.5);
   z-index: 5;
   color: #ffffff;
   border-radius: 0.5rem;
+}
+
+/****************** SLIDER *******************/
+.slider {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.slider-thumbnail {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-thumb-img {
+  margin: 2rem 0;
 }

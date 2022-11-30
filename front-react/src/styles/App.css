@@ -174,7 +174,7 @@ section {
 }
 
 .listing-image img {
-  max-height: 18rem;
+  max-height: 21rem;
   width: auto;
 }
 
@@ -378,4 +378,19 @@ section {
 .animal-details-button .button-cta {
   width: 30%;
   margin: 0 auto;
+}
+
+/****************** FAVOURITES  *******************/
+
+.favourites-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15rem 0;
+}
+
+.favourites-container .listing-image img {
+  max-height: 28rem;
+  width: auto;
 }

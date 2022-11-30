@@ -6,11 +6,11 @@ import Favourites from "./page/Favourites";
 import "./styles/App.css";
 /*<Home/>
 <AnimalDetail/>
+  <Favourites />
 */
 function App() {
   return (
-
-    <Favourites />
+    <Home />
   );
 }
 

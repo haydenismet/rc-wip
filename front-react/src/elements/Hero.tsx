@@ -12,7 +12,6 @@ export default function Hero() {
                             adoption <div className="adoption-subheading">made simple</div>
                             <Button />
                         </div>
-
                         <img src={bgImg} className="adopted-img" alt="adopted animals" />
                     </div>
                 </div>

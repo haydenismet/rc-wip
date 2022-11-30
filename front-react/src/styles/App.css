@@ -15,6 +15,7 @@
   --bg-colour-header-footer: #585858;
   --body-font-colour: #585858;
   --container-width: 1100px;
+  --container-width-tablet: 768px;
   --rectangle-bg-colour: #d9d9d9;
   --rectangle-text-colour: #585858;
   --body-bg-colour: #f4f4f4;
@@ -393,4 +394,28 @@ section {
 .favourites-container .listing-image img {
   max-height: 28rem;
   width: auto;
+}
+
+/*1100px*/
+
+@media screen and (max-width: 1100px) {
+  .container {
+    max-width: var(--container-width-tablet);
+    margin: auto;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+
+  .adopted-img {
+    max-height: 200px;
+    width: auto;
+    position: absolute;
+    right: -1rem;
+    bottom: 3rem;
+  }
 }
